@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="$lang$" xml:lang="$lang$"$if(dir)$ dir="$dir$"$endif$>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /> -->
+$for(author-meta)$
+  <meta name="author" content="$author-meta$" />
+$endfor$
+$if(date-meta)$
+  <meta name="dcterms.date" content="$date-meta$" />
+$endif$
+$if(keywords)$
+  <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />
+$endif$
+$if(description-meta)$
+  <meta name="description" content="$description-meta$" />
+$endif$
+  <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
+  <link rel="stylesheet" href="resources/tilos/tilos.css">
+  <style>
+    $styles.html()$
+  </style>
+$for(css)$
+  <link rel="stylesheet" href="$css$" />
+$endfor$
+$for(header-includes)$
+  $header-includes$
+$endfor$
+$if(math)$
+$if(mathjax)$
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+$endif$
+  $math$
+$endif$
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+$for(include-before)$
+$include-before$
+$endfor$
+
+<header id="tilos-header" class="tilos-header">
+<div id="event-info-column" class="tilos-header-column">
+    <img src="resources/tilos/tilos-logo.png" alt="Tilos" class="tilos-logo">
+    <p class="tilos-event">$event$</p>
+    <p class="tilos-date">$date$</p>
+</div>
+<div id="author-info-column" class="tilos-header-column">
+    <p id="author-info" class="tilos-author-info">
+    <span id="authors" class="tilos-authors">
+        $for(author)$<span class="tilos-author">$author$</span>$endfor$
+    </span>
+    — <span>$affiliation$</span>
+    </p>
+    <p id="sip-topic" class="tilos-sip-topic">
+    TILOS SIP Topic: $tilos-topic$
+    </p>
+</div>
+<div id="photo-column">
+    <img src="$photo$" alt="$author/first$" class="tilos-photo">
+</div>
+<!-- <h1 class="title">$title$</h1> -->
+<!-- $if(subtitle)$ -->
+<!-- <p class="subtitle">$subtitle$</p> -->
+<!-- $endif$ -->
+</header>
+
+<main id="tilos-main">
+$body$
+</main>
+$for(include-after)$
+$include-after$
+$endfor$
+
+<footer id="tilos-footer">
+    <img src="resources/tilos/uni-logos.png" alt="universities logo" id="uni-logo">
+</footer>
+</body>
+</html>

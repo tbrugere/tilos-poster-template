@@ -1,0 +1,120 @@
+#math-header {
+    display:none;
+}
+
+body {
+    padding-left: 1.90cm;
+    padding-right: 1.90cm;
+    padding-top: 2.15cm;
+    padding-bottom: 0cm;
+    width: 36in;
+    height: 42in;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+@page {
+    margin: 0cm;
+    size: 36in 42in;
+}
+
+/*---------------------------------------------------------------------------*/
+/* Header */
+
+header#tilos-header {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 0.21cm solid #C00000;
+    height: 7.5cm;
+    justify-content: space-between;
+    gap: 0.5cm;
+}
+
+#event-info-column{
+    width: 12.80cm;
+    font-size: 31pt;
+    line-height: 100%;
+}
+
+#event-info-column p{
+    margin: 0;
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+#author-info-column{
+    display: flex;
+    flex-direction: column;
+    font-size: 35pt;
+    width:100%;
+    /* align-items: center; */
+    /* flex-grow: 2; */
+}
+
+#author-info{
+    font-family: Arial, sans-serif;
+    width: 100%;
+    text-align: center;
+}
+
+#sip-topic{
+    font-family: "times new roman", serif;
+    text-align: right;
+}
+
+#photo-column{
+    width: 7cm;
+    padding-bottom: 1cm;
+}
+#photo-column img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.day {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #22228A;
+}
+
+.tilos-author:first-child{
+    text-decoration: underline;
+}
+
+span.tilos-author + span.tilos-author::before {
+    content: ", ";
+}
+
+/*---------------------------------------------------------------------------*/
+/* Main content*/
+
+main#tilos-main{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#tilos-main > section{
+    margin: 0.5cm;
+    border: 1px solid black;
+    padding: 0.5cm;
+}
+
+#tilos-main h1 {
+    font-size: 42pt;
+}
+
+#tilos-main h2 {
+    font-size: 35pt;
+}
+
+
+/*---------------------------------------------------------------------------*/
+/* Footer */
+
+footer#tilos-footer {
+    display: flex;
+    flex-direction: row;
+    height: 1.7cm;
+    justify-content: right;
+    gap: 0.5cm;
+}
