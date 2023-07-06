@@ -32,9 +32,13 @@ header#tilos-header {
 }
 
 #event-info-column{
-    width: 12.80cm;
+    width: 14cm;
     font-size: 31pt;
     line-height: 100%;
+}
+
+#tilos-logo{
+    width: 12.80cm;
 }
 
 #event-info-column p{
@@ -91,6 +95,8 @@ main#tilos-main{
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    font-size: 30pt;
+    font-family: Arial, sans-serif;
 }
 
 #tilos-main > section{
@@ -100,11 +106,16 @@ main#tilos-main{
 }
 
 #tilos-main h1 {
-    font-size: 42pt;
+    font-size: 45pt;
 }
 
 #tilos-main h2 {
-    font-size: 35pt;
+    font-size: 40pt;
+    text-decoration: underline;
+}
+
+#tilos-main h3 {
+    font-size: 32pt;
 }
 
 
